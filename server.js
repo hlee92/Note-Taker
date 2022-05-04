@@ -29,30 +29,6 @@ app.post('/api/notes', (req, res) => {
   });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log(`API server now on port 3001!`);
   });
