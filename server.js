@@ -8,7 +8,8 @@ app.use(express.json())
 const  notes  = require('./db.json');
 
 app.get('/api/notes', (req, res) => {
-    res.json(notes);
+    let data = fs.readFileSync('db.json', 'utf8')
+    res.json(JSON.parse(data));
   });
 
 app.get('/notes', (req, res) => {
